@@ -1,0 +1,268 @@
+/* Services Section Styles */
+.services {
+  min-height: 100vh;
+  padding-top: 100px;
+  background-color: var(--bg-primary);
+}
+
+.services-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+}
+
+/* Services List - Left Side */
+.services-list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all 0.8s ease;
+}
+
+.services-list.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.service-card {
+  display: flex;
+  gap: 20px;
+  padding: 25px;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+  animation: fadeInUp 0.6s ease forwards;
+  opacity: 0;
+}
+
+.service-card.visible {
+  opacity: 1;
+}
+
+.service-card:hover {
+  transform: translateX(10px);
+  box-shadow: 0 10px 30px var(--shadow-color);
+}
+
+.service-icon {
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-tertiary);
+  border: 2px solid var(--text-primary);
+}
+
+.service-icon i {
+  font-size: 1.5rem;
+  color: var(--text-primary);
+}
+
+.service-info {
+  flex: 1;
+}
+
+.service-info h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: var(--text-primary);
+}
+
+.service-info > p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.service-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.service-features li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.service-features li i {
+  font-size: 0.75rem;
+  color: var(--text-primary);
+}
+
+/* Contact Form - Right Side */
+.contact-form-wrapper {
+  background-color: var(--bg-secondary);
+  padding: 40px;
+  border: 1px solid var(--border-color);
+  opacity: 0;
+  transform: translateX(50px);
+  transition: all 0.8s ease 0.2s;
+}
+
+.contact-form-wrapper.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.form-header {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.form-header h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: var(--text-primary);
+}
+
+.form-header p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+/* Form Styles */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 12px 15px;
+  background-color: var(--bg-primary);
+  border: 2px solid var(--border-color);
+  color: var(--text-primary);
+  font-size: 1rem;
+  font-family: inherit;
+  transition: all 0.3s ease;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: var(--text-muted);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--text-primary);
+}
+
+.form-group select {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23666' viewBox='0 0 16 16'%3E%3Cpath d='M8 11L3 6h10l-5 5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.submit-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.submit-btn i {
+  font-size: 1rem;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 968px) {
+  .services-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .services-list {
+    order: 2;
+  }
+
+  .contact-form-wrapper {
+    order: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .services {
+    padding-top: 80px;
+  }
+
+  .service-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .service-icon {
+    margin: 0 auto;
+  }
+
+  .service-features {
+    justify-content: center;
+  }
+
+  .contact-form-wrapper {
+    padding: 30px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .service-info h3 {
+    font-size: 1.2rem;
+  }
+
+  .form-header h3 {
+    font-size: 1.3rem;
+  }
+
+  .service-features {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-card {
+    padding: 20px;
+  }
+}

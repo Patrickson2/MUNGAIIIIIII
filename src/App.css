@@ -1,0 +1,43 @@
+/* App Container Styles */
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+/* Smooth scrolling for the whole page */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selection styling */
+::selection {
+  background-color: var(--text-primary);
+  color: var(--bg-primary);
+}
+
+/* Focus styles for accessibility */
+:focus-visible {
+  outline: 2px solid var(--text-primary);
+  outline-offset: 2px;
+}
+
+/* Ensure sections don't overlap with fixed navbar */
+#about,
+#projects,
+#services {
+  scroll-margin-top: 80px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  #about,
+  #projects,
+  #services {
+    scroll-margin-top: 70px;
+  }
+}

@@ -7,7 +7,7 @@ import Projects from './components/Projects';
 import Services from './components/Services';
 
 function App() {
-  const [theme, setTheme] = useState('light');
+  const [theme, setTheme] = useState('dark');
 
   useEffect(() => {
     // Check for saved theme preference or use system preference
@@ -16,8 +16,8 @@ function App() {
       setTheme(savedTheme);
       document.documentElement.setAttribute('data-theme', savedTheme);
     } else {
-      // Default to light theme
-      document.documentElement.setAttribute('data-theme', 'light');
+      // Default to dark theme
+      document.documentElement.setAttribute('data-theme', 'dark');
     }
   }, []);
 

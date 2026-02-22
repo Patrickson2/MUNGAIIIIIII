@@ -141,9 +141,9 @@ My focus is on clean architecture, efficient APIs, and reliable data flows. On t
 I turn ideas into production-ready applications by writing maintainable code, structuring databases properly, and building backend logic that can scale as the product grows.
               </p>
               <p className="about-description">
-                My journey in web development started with curiosity and has evolved 
-                into a professional career. I specialize in creating seamless user 
-                experiences while ensuring clean, maintainable code.
+               I started in software development out of curiosity about how systems work behind the scenes. That grew into a full-stack career with a strong focus on backend architecture.
+
+I build scalable APIs, structured databases, and clean server-side logic, while delivering responsive front-end interfaces backed by maintainable code.
               </p>
             </div>
           </div>

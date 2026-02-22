@@ -14,7 +14,7 @@ const Projects = () => {
       icon: 'fa-calendar-event',
       demoLink: 'https://phase-4-project-event-mate.onrender.com/docs',
       githubLink: null,
-      image: '/Pics/Screenshot from 2026-02-22 00-28-02.png'
+      image: '/Pics/Screenshot from 2026-02-22 22-07-44.png'
     },
     {
       id: 2,
@@ -34,7 +34,7 @@ const Projects = () => {
       icon: 'fa-briefcase',
       demoLink: 'https://hacker-thon-mg8o.vercel.app/',
       githubLink: null,
-      image: '/Pics/Screenshot from 2026-02-22 22-07-44.png'
+      image: '/Pics/Screenshot from 2026-02-22 00-28-02.png'
     },
     {
       id: 4,

@@ -21,6 +21,7 @@
   transition: all 0.8s ease;
 }
 
+
 .services-list.visible {
   opacity: 1;
   transform: translateX(0);
